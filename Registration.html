@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('fonts/CeraPro-Regular.woff2') format('woff2'),
+            url('fonts/CeraPro-Regular.woff') format('woff'),
+            url('fonts/CeraPro-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cera Pro';
+            src: url('fonts/CeraPro-Bold.woff2') format('woff2'),
+            url('fonts/CeraPro-Bold.woff') format('woff'),
+            url('fonts/CeraPro-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body style="font-family: 'Cera Pro', sans-serif;">
+<img src="images/cross.svg" alt="close-svg">
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
+    <h1>
+        <span style="color: #3D3D3D; font-size: 20px  ;font-weight: 500; line-height: 16px; text-align: left;">Login</span>
+        <span style="color: #3D3D3D; font-size: 18px; font-weight: 250; line-height: 16px; text-align: left;">|</span>
+        <span style="color: #46A358; font-size: 20px; font-weight: 500; line-height: 16px; text-align: left;">Register</span>
+    </h1>
+    <h2 style="font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;
+">Enter your email and password to register.</h2>
+    <form action="/submit" method="post">
+        <div>
+            <input style=" border: 1px solid #EAEAEA; border-radius: 5px;" type="text" name="username"
+                   placeholder="Username" required>
+        </div>
+        <div>
+            <input style="border: 1px solid #EAEAEA; border-radius: 5px;" type="text" name="email"
+                   placeholder="Enter your email address" required>
+        </div>
+        <div>
+            <input style="border: 1px solid #EAEAEA; border-radius: 5px;" type="text" name="username"
+                   placeholder="Username" required>
+        </div>
+        <div>
+            <input style="border: 1px solid #EAEAEA; border-radius: 5px;" type="password" name="password"
+                   placeholder="Password" required>
+        </div>
+        <div>
+            <input style="border: 1px solid #EAEAEA; border-radius: 5px;" type="password" name="confirm_password"
+                   placeholder="Confirm password" required>
+        </div>
+        <div>
+            <input style="" type="submit" value="Register">
+        </div>
+    </form>
+    <p style="font-size: 13px; font-weight: 400; line-height: 16px; text-align: left;">Or register with</p>
+    <a href="https://www.google.com/">
+        <div style="width: 300px; height: 40px; border-radius: 5px; border: 1px solid #EAEAEA;">
+            <img src="images/google-logo.svg" alt="google-logo">
+            <p style="display: inline; font-size: 13px; font-weight: 500; line-height: 16px; text-align: center;">
+                Continue with Google</p>
+        </div>
+    </a>
+    <a href="https://www.facebook.com">
+        <div style="width: 300px; height: 40px; border-radius: 5px; border: 1px solid #EAEAEA;">
+            <img src="images/facebook-logo.svg" alt="facebook-logo">
+            <p style="display: inline; font-size: 13px; font-weight: 500; line-height: 16px; text-align: center;">
+                Continue with Facebook</p>
+        </div>
+    </a>
+</div>
+<!--I have a question. Why this element displays above the previous <div>?-->
+<div style="width: 500px; height: 10px; top: 646px; gap: 0px; background-color: #46A358;"></div>
+</body>
+</html>
