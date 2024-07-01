@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.modal {
+    max-width: 500px;
+    margin: auto;
+    padding-top: 52px;
+}
+
+.modal .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.modal .title a {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 80%;
+    color: #3d3d3d;
+    text-decoration: none;
+}
+
+.modal .title a:hover {
+    color: #46a358;
+}
+
+.modal .title span {
+    font-weight: 250;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+    margin: 0 11px;
+}
+
+.login-text {
+    margin-left: 100px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 123%;
+    color: #3d3d3d;
+    margin-bottom: 14px;
+}
+
+.modal .login-form div input {
+    width: 300px;
+    height: 40px;
+    margin: 0 0 16px 100px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding-left: 14px;
+}
+
+.confirm-password {
+    margin-bottom: 41px!important;
+}
+
+.modal .login-form div input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 114%;
+    color: #a5a5a5;
+    margin-left: 14px;
+}
+
+.register-submit input {
+    background: #46a358;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+}
+
+.modal .external-register-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .external-register-text .line {
+    border: 1px solid #eaeaea;
+    width: 97px;
+    height: 0;
+}
+
+.modal .external-register-text .text {
+    padding: 0 10px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 123%;
+    margin-bottom: 27px;
+    color: #3d3d3d;
+}
+
+.modal .external-login {
+    display: block;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    margin: 0 0 15px 100px;
+    padding-top: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 123%;
+    text-align: center;
+    color: #727272;
+}
