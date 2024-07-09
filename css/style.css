@@ -262,11 +262,6 @@ main .welcome .container .shop-btn {
     text-decoration: none;
 }
 
-main .welcome .container .welcome-image {
-    display: flex;
-    align-items: flex-end;
-}
-
 main .welcome .container .welcome-image img {
     width: 507px;
     height: 450px;
