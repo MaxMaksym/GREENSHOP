@@ -268,7 +268,178 @@ main .welcome .container .welcome-image img {
     left: 693px;
 }
 
+main .goods-section {
+    margin-top: 46px;
+    padding-bottom: 82px;
+    display: flex;
+}
 
+main .goods-section .sidebar {
+    max-width: 310px;
+    padding-top: 14px;
+    margin-right: 50px;
+    display: flex;
+    background-color: #FBFBFB;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1244px;
+}
 
+main .goods-section .sidebar h3 {
+    font-family: var(--font-family), serif;
+    margin-left: 18px;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+}
 
+main .goods-section .sidebar .categories li {
+    font-family: var(--font-family), serif;
+    margin-left: 30px;
+    font-weight: 400;
+    color: #3d3d3d;
+    font-size: 15px;
+    line-height: 267%;
+}
+
+main .goods-section .sidebar .categories li:hover {
+    font-family: var(--font-family), serif;
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 267%;
+    color: #46a358;
+}
+
+main .goods-section .goods-list .goods-header {
+    max-width: 840px;
+    display: flex;
+    margin-bottom: 31px;
+    justify-content: space-between;
+    gap: 385px;
+}
+
+main .goods-section .goods-list .goods-header ul {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+main .goods-section .goods-list .goods-header ul a {
+    font-family: var(--font-family), serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+}
+
+main .goods-section .goods-list .goods-header ul a:hover {
+    font-family: var(--font-family), serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 107%;
+    color: #46a358;
+}
+
+main .goods-header .sort-by {
+    font-family: var(--font-family), serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+}
+
+main .goods-section .goods-list .goods {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+    max-width: 840px;
+    column-gap: 33px;
+    row-gap: 70px;
+}
+
+main .goods-section .goods-list .goods .item {
+    padding: 23px 4px 0;
+    text-decoration: none;
+    flex-direction: column;
+}
+
+main .goods-section .goods-list .goods .item a{
+    text-decoration: none;
+}
+
+main .goods-section .goods-list .goods .item img {
+    background-color: #fbfbfb;
+    margin-bottom: 31px;
+    height: 250px;
+    width: 250px;
+}
+
+main .goods-section .goods-list .goods .item .name {
+    font-family: var(--font-family), serif;
+    text-decoration: none;
+    margin-bottom: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #3d3d3d;
+}
+
+main .goods-section .goods-list .goods .item .price {
+    font-family: var(--font-family), serif;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #46a358;
+}
+
+main .goods-section .pagination ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main .goods-section .pagination ul li {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding-top: 9px;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+main .goods-section .pagination ul li:hover {
+    background-color: #46a358;
+}
+
+main .goods-section .pagination ul li:hover a {
+    font-family: var(--font-family), serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #fff;
+}
+
+main .goods-section .pagination ul li:hover img {
+    color: #e5e5e5;
+}
+
+main .goods-section .pagination ul li:last-child {
+    margin-right: 0;
+}
+
+main .goods-section .pagination ul li a {
+    font-family: var(--font-family), serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
 
