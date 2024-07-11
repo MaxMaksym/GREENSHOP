@@ -349,8 +349,13 @@ main .goods-header .sort-by {
     font-family: var(--font-family), serif;
     font-weight: 400;
     font-size: 15px;
+    display: inline-flex;
     line-height: 107%;
     color: #3d3d3d;
+}
+
+main .goods-header .sort-by p {
+    margin-right: 5px;
 }
 
 main .goods-section .goods-list .goods {
@@ -368,7 +373,7 @@ main .goods-section .goods-list .goods .item {
     flex-direction: column;
 }
 
-main .goods-section .goods-list .goods .item a{
+main .goods-section .goods-list .goods .item a {
     text-decoration: none;
 }
 
