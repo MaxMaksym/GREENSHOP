@@ -554,7 +554,7 @@ main .special-offers-section .article .info .find-more-btn img {
 }
 
 .blog-section .container .blog article > *:not(.blog-image) {
-    padding: 0 13px 12px;
+    margin-left: 13px;
 }
 
 .blog-section .container .blog .blog-image img {
@@ -592,8 +592,9 @@ main .special-offers-section .article .info .find-more-btn img {
 
 .blog-section .container .blog .read-more {
     font-family: var(--font-family), serif;
-    display: flex;
+    display: inline-flex;
     text-decoration: none;
+    margin-bottom: 12px;
     font-weight: 500;
     font-size: 14px;
     line-height: 114%;
