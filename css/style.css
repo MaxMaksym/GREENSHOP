@@ -270,7 +270,7 @@ main .welcome .container .welcome-image img {
 
 main .goods-section {
     margin-top: 46px;
-    padding-bottom: 82px;
+    margin-bottom: 94px;
     display: flex;
 }
 
@@ -281,8 +281,6 @@ main .goods-section .sidebar {
     display: flex;
     background-color: #FBFBFB;
     flex-direction: column;
-    justify-content: space-between;
-    height: 1244px;
 }
 
 main .goods-section .sidebar h3 {
@@ -295,7 +293,16 @@ main .goods-section .sidebar h3 {
     color: #3d3d3d;
 }
 
+main .goods-section .sidebar ul {
+    margin-bottom: 377px;
+}
+
 main .goods-section .sidebar .categories li {
+
+}
+
+main .goods-section .sidebar .categories li a {
+    text-decoration: none;
     font-family: var(--font-family), serif;
     margin-left: 30px;
     font-weight: 400;
@@ -304,7 +311,7 @@ main .goods-section .sidebar .categories li {
     line-height: 267%;
 }
 
-main .goods-section .sidebar .categories li:hover {
+main .goods-section .sidebar .categories li a:hover {
     font-family: var(--font-family), serif;
     margin-left: 30px;
     font-weight: 700;
@@ -318,7 +325,6 @@ main .goods-section .goods-list .goods-header {
     display: flex;
     margin-bottom: 31px;
     justify-content: space-between;
-    gap: 385px;
 }
 
 main .goods-section .goods-list .goods-header ul {
@@ -369,7 +375,6 @@ main .goods-section .goods-list .goods {
 
 main .goods-section .goods-list .goods .item {
     padding: 23px 4px 0;
-    text-decoration: none;
     flex-direction: column;
 }
 
@@ -385,6 +390,7 @@ main .goods-section .goods-list .goods .item img {
 }
 
 main .goods-section .goods-list .goods .item .name {
+    display: block;
     font-family: var(--font-family), serif;
     text-decoration: none;
     margin-bottom: 6px;
@@ -395,6 +401,7 @@ main .goods-section .goods-list .goods .item .name {
 }
 
 main .goods-section .goods-list .goods .item .price {
+    display: block;
     font-family: var(--font-family), serif;
     text-decoration: none;
     font-weight: 700;
@@ -448,3 +455,164 @@ main .goods-section .pagination ul li a {
     text-decoration: none;
 }
 
+main .special-offers-section {
+    margin-bottom: 138px;
+}
+
+main .special-offers-section .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .special-offers-section .article img {
+    width: 287px;
+    height: 292px;
+}
+
+main .special-offers-section .article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 586px;
+    padding-right: 32px;
+    background: #fbfbfb;
+    text-align: right;
+}
+
+main .special-offers-section .article .info h3 {
+    font-family: var(--font-family), serif;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 9px;
+
+    line-height: 133%;
+    text-transform: uppercase;
+    text-align: right;
+    color: #3d3d3d;
+}
+
+main .special-offers-section .article .info p {
+    font-family: var(--font-family), serif;
+    font-weight: 400;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: right;
+    color: #727272;
+}
+
+main .special-offers-section .article .info .find-more-btn {
+    padding-top: 11px;
+    padding-left: 28px;
+    display: inline-flex;
+    border-radius: 6px;
+    text-decoration: none;
+    width: 140px;
+    height: 40px;
+    color: #fff;
+    font-family: var(--font-family), serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    background: #46a358;
+}
+
+main .special-offers-section .article .info .find-more-btn img {
+    margin-left: 2px;
+    height: 18px;
+    width: 18px;
+}
+
+.blog-section .container h2 {
+    font-family: var(--font-family), serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 53%;
+    text-align: center;
+    color: #3d3d3d;
+    margin-bottom: 15px;
+}
+
+.blog-section .container .blog-paragraph {
+    font-family: var(--font-family), serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    text-align: center;
+    color: #727272;
+    margin-bottom: 35px;
+}
+
+.blog-section .container .blog {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-section .container .blog article {
+    max-width: 268px;
+    background: #fbfbfb;
+}
+
+.blog-section .container .blog article > *:not(.blog-image) {
+    padding: 0 13px 12px;
+}
+
+.blog-section .container .blog .blog-image img {
+    width: 268px;
+    height: 195px;
+    margin-bottom: 9px;
+}
+
+.blog-section .container .blog .article-date {
+    font-family: var(--font-family), serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    margin-bottom: 4px;
+    color: #46a358;
+}
+
+.blog-section .container .blog h3 {
+    font-family: var(--font-family), serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: #3d3d3d;
+    margin-bottom: 4px;
+}
+
+.blog-section .container .blog .description {
+    font-family: var(--font-family), serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #727272;
+    margin-bottom: 9px;
+}
+
+.blog-section .container .blog .read-more {
+    font-family: var(--font-family), serif;
+    display: flex;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #3d3d3d;
+}
+
+.blog-section .container .blog .read-more:hover {
+    font-family: var(--font-family), serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    color: #46a358;
+}
+
+.blog-section .container .blog .read-more:hover svg path {
+    fill: #46a358;
+}
+
+
+.blog-section .container .blog .read-more svg {
+    margin-left: 5px;
+}
