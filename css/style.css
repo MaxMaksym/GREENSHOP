@@ -149,7 +149,7 @@ header .container {
 }
 
 
-header .container .login_btn {
+header .login_btn {
     border-radius: 6px;
     background: #46a358;
     padding: 7px 17px;
@@ -162,39 +162,118 @@ header .container .login_btn {
     color: #fff;
 }
 
-header .container .main-nav ul {
+header .main-nav .first-ul {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
-header .container .main-nav ul li {
-    margin: 0 25px 0 25px;
+header .main-nav .second-ul {
+    display: none;
+}
+
+header .main-nav .first-li {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d;
+    position: relative;
+}
+
+header .main-nav .first-li > a {
     text-decoration: none;
     font-weight: 400;
     font-size: 16px;
     color: #3d3d3d;
 }
 
-header .container .main-nav ul a {
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 16px;
-    color: #3d3d3d;
-}
-
-header .container .main-nav ul li:last-child {
-    margin-right: 0;
-}
-
-header .container .main-nav ul li:first-child {
-    margin-left: 0;
-}
-
-header .container .main-nav ul li a:hover {
+header .main-nav .first-li:hover > a {
     font-weight: 700;
     font-size: 16px;
     color: #3d3d3d;
+}
+
+header .main-nav .first-li:hover .second-ul {
+    display: block;
+    margin-top: 40px;
+}
+
+header .main-nav .first-li .second-ul {
+    text-align: left;
+    min-width: 188px;
+    position: absolute;
+    top: -25px;
+    left: -56px;
+}
+
+header .main-nav .dropdown-li {
+    background-color: #edf6ee;
+    padding: 8px 0 8px 14px;
+}
+
+header .main-nav .dropdown-li > a {
+    font-family: var(--font-family), serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3d3d3d;
+    text-decoration: none;
+}
+
+header .main-nav .second-li {
+    padding: 8px 0 8px 14px;
+    position: relative;
+}
+
+header .main-nav .additional-dropdown::after {
+    content: url("../images/ui-elements/dropdown-cursor.svg");
+    display: inline;
+    position: absolute;
+    right: 17px;
+    width: 10px;
+    height: 6px;
+    margin-left: 30px;
+}
+
+header .main-nav .second-li:hover > a {
+    font-family: var(--font-family), serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+}
+
+header .main-nav .additional-dropdown:hover::after {
+    content: url("../images/ui-elements/dropdown-cursor-white.svg");
+    display: inline;
+    position: absolute;
+    right: 17px;
+    width: 10px;
+    height: 6px;
+    margin-left: 30px;
+}
+
+header .main-nav .second-li:hover {
+    background-color: #1a712a;
+}
+
+header .main-nav .first-li .second-ul .second-li:first-child {
+    margin-top: 45px;
+}
+
+header .main-nav .third-ul {
+    display: none;
+    position: absolute;
+    left: 189px;
+    top: -98px;
+    width: 178px;
+}
+
+header .main-nav .second-li:hover .third-ul {
+    display: block;
+}
+
+header .main-nav .second-li:active {
+    background-color: #1a712a;
 }
 
 main {
@@ -334,6 +413,17 @@ main .goods-section .goods-list .goods-header ul {
     gap: 40px;
 }
 
+main .goods-section .goods-list .goods-header ul li {
+    padding-bottom: 7px;
+    border-bottom: 2px solid #ffffff;
+
+}
+
+main .goods-section .goods-list .goods-header ul li:hover {
+    border-bottom: 2px solid #46a358;
+
+}
+
 main .goods-section .goods-list .goods-header ul a {
     font-family: var(--font-family), serif;
     text-decoration: none;
@@ -343,7 +433,7 @@ main .goods-section .goods-list .goods-header ul a {
     color: #3d3d3d;
 }
 
-main .goods-section .goods-list .goods-header ul a:hover {
+main .goods-section .goods-list .goods-header li:hover a {
     font-family: var(--font-family), serif;
     font-weight: 700;
     font-size: 15px;
@@ -364,7 +454,7 @@ main .goods-header .sort-by p {
     margin-right: 5px;
 }
 
-main .goods-section .goods-list .goods {
+.goods-section .goods-list .goods {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 90px;
@@ -373,23 +463,64 @@ main .goods-section .goods-list .goods {
     row-gap: 70px;
 }
 
-main .goods-section .goods-list .goods .item {
+.goods-section .goods-list .item {
     padding: 23px 4px 0;
+    border-top: 1px solid #ffffff;
     flex-direction: column;
+    position: relative;
 }
 
-main .goods-section .goods-list .goods .item a {
+.goods-section .goods-list .item:hover {
+    border-top: 1px solid #46a358;
+}
+
+.goods-section .goods-list .item .item-hover {
+    width: 125px;
+    height: 35px;
+    display: none;
+}
+
+.goods-section .goods-list .item:hover .item-hover {
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 8px 6px;
+    position: absolute;
+    bottom: 57px;
+    left: calc(50% - 63px);
+}
+
+.goods-section .goods-list .item-hover svg:hover path {
+    fill: #46A358;
+}
+
+
+.goods-section .goods-list .item .discount {
+    display: block;
+    font-family: var(--font-family), serif;
+    background: #46a358;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+    height: 29px;
+    padding: 7px 8px;
+    position: absolute;
+    left: 0;
+    top: 14px;
+}
+
+.goods-section .goods-list .goods .item a {
     text-decoration: none;
 }
 
-main .goods-section .goods-list .goods .item img {
+.goods-section .goods-list .goods .item .item-image {
     background-color: #fbfbfb;
     margin-bottom: 31px;
     height: 250px;
     width: 250px;
 }
 
-main .goods-section .goods-list .goods .item .name {
+.goods-section .goods-list .goods .item .name {
     display: block;
     font-family: var(--font-family), serif;
     text-decoration: none;
@@ -408,6 +539,16 @@ main .goods-section .goods-list .goods .item .price {
     font-size: 18px;
     line-height: 89%;
     color: #46a358;
+}
+
+main .goods-section .goods-list .goods .item .price .old-price {
+    font-family: var(--font-family), serif;
+    margin-left: 16px;
+    text-decoration: line-through;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 89%;
+    color: #a5a5a5;
 }
 
 main .goods-section .pagination ul {
