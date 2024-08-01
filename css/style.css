@@ -25,6 +25,59 @@ a {
     text-decoration: none;
 }
 
+body {
+    position: relative;
+}
+
+.preloader {
+    position: absolute;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    background-color: #52c368;
+    animation: load-animation 0.8s 2.5s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes load-animation {
+    0% {
+        width: 100%;
+        height: 100%;
+        background-color: #46A358;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid rgba(17, 177, 0, 0.66);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .modal {
     font-family: 'cera_round_pro_demoregular', serif;
     max-width: 500px;
@@ -65,6 +118,10 @@ a {
     margin-bottom: 14px;
 }
 
+.modal .login-form {
+    margin-bottom: 20px;
+}
+
 .modal .login-form div input {
     width: 300px;
     height: 40px;
@@ -98,6 +155,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 27px;
 }
 
 .modal .external-register-text .line {
@@ -111,7 +169,7 @@ a {
     font-weight: 400;
     font-size: 13px;
     line-height: 123%;
-    margin-bottom: 27px;
+
     color: #3d3d3d;
 }
 
@@ -147,9 +205,8 @@ header .container {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 18px;
-    border-bottom: 0.30px solid rgba(70, 163, 88, 0.5);
+    border-bottom: 1px solid rgba(70, 163, 88, 0.5);
 }
-
 
 header .login_btn {
     border-radius: 6px;
@@ -161,6 +218,15 @@ header .login_btn {
     font-weight: 500;
     font-size: 16px;
     color: #fff;
+    transition: 1s;
+}
+
+header .login_btn img {
+    margin-right: 4px;
+}
+
+header .login_btn:hover {
+    background-color: rgba(38, 177, 0, 0.66);
 }
 
 header .main-nav .first-ul {
@@ -171,7 +237,9 @@ header .main-nav .first-ul {
 }
 
 header .main-nav .second-ul {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
 }
 
 header .main-nav .first-li {
@@ -185,6 +253,7 @@ header .main-nav .first-li > a {
     font-weight: 400;
     font-size: 16px;
     color: #3d3d3d;
+    transition: all 1s;
 }
 
 header .main-nav .first-li:hover > a {
@@ -194,7 +263,8 @@ header .main-nav .first-li:hover > a {
 }
 
 header .main-nav .first-li:hover .second-ul {
-    display: block;
+    visibility: visible;
+    opacity: 1;
     margin-top: 40px;
 }
 
@@ -259,7 +329,9 @@ header .main-nav .first-li .second-ul .second-li:first-child {
 }
 
 header .main-nav .third-ul {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
     position: absolute;
     left: 189px;
     top: -98px;
@@ -267,7 +339,8 @@ header .main-nav .third-ul {
 }
 
 header .main-nav .second-li:hover .third-ul {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 header .main-nav .second-li:active {
@@ -336,6 +409,11 @@ main .welcome .container .shop-btn {
     color: #fff;
     background: #46a358;
     display: inline-flex;
+    transition: 1s;
+}
+
+main .welcome .container .shop-btn:hover {
+    background-color: rgba(38, 177, 0, 0.66);
 }
 
 main .welcome .container .welcome-image img {
@@ -463,31 +541,36 @@ main .goods-header .sort-by p {
     border-top: 1px solid #ffffff;
     flex-direction: column;
     position: relative;
+    transition: all 0.5s;
 }
 
 .goods-section .goods-list .item:hover {
     border-top: 1px solid #46a358;
+
 }
 
 .goods-section .goods-list .item .item-hover {
     width: 125px;
     height: 35px;
-    display: none;
-}
-
-.goods-section .goods-list .item:hover .item-hover {
+    visibility: hidden;
+    opacity: 0;
     display: inline-flex;
     justify-content: space-between;
     padding: 8px 6px;
     position: absolute;
     bottom: 57px;
     left: calc(50% - 63px);
+    transition: 0.5s;
+}
+
+.goods-section .goods-list .item:hover .item-hover {
+    visibility: visible;
+    opacity: 1;
 }
 
 .goods-section .goods-list .item-hover svg:hover path {
     fill: #46A358;
 }
-
 
 .goods-section .goods-list .item .discount {
     display: block;
@@ -643,6 +726,11 @@ main .special-offers-section .article .info .find-more-btn {
     font-size: 14px;
     line-height: 143%;
     background: #46a358;
+    transition: 1s;
+}
+
+main .special-offers-section .article .info .find-more-btn:hover {
+    background-color: rgba(38, 177, 0, 0.66);
 }
 
 main .special-offers-section .article .info .find-more-btn img {
@@ -858,6 +946,11 @@ footer .news-section .email-form form .submit-news-email {
     font-size: 18px;
     line-height: 89%;
     color: #fff;
+    transition: 1s;
+}
+
+footer .news-section .email-form form .submit-news-email:hover {
+    background-color: rgba(38, 177, 0, 0.66);;
 }
 
 footer .news-section .email-form p {
@@ -962,3 +1055,34 @@ footer > p {
     color: #3d3d3d;
     margin-bottom: 10px;
 }
+
+
+.border-top-animate {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    border: none;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.border-top-animate::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: black;
+    animation: borderTopAnimation 1s forwards;
+}
+
+@keyframes borderTopAnimation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
