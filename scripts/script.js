@@ -1,21 +1,40 @@
 $('.owl-carousel').owlCarousel({
-    autoplay: true,
+    autoplay:true,
     autoplayTimeout: 6500,
     autoplaySpeed: 1000,
     loop: true,
-    responsive: {
-        0: {
-            items: 1
+    nav: true,
+    dots:true,
+    navText: false,
+    responsive:{
+        0:{
+            items:1
         },
-        1100: {
-            items: 4
+        768:{
+            items:2
+        },
+        1100:{
+            items:4
         }
     }
-
 });
 
-(function ($) {
-    "use strict";
+$( function() {
+    $( "#accordion" ).accordion();
+} );
+
+
+
+
+/* Please ❤ this if you like it! */
+
+
+(function($) { "use strict";
+
+    
+
+    //Navigation
+
     var app = function () {
         var body = undefined;
         var menu = undefined;
@@ -32,7 +51,7 @@ $('.owl-carousel').owlCarousel({
             });
         };
         var toggleClass = function toggleClass(element, stringClass) {
-            if (element.classList.contains(stringClass)) element.classList.remove(stringClass); else element.classList.add(stringClass);
+            if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
         };
         init();
     }();
@@ -44,7 +63,8 @@ $('.owl-carousel').owlCarousel({
         if ($("body").hasClass("light")) {
             $("body").removeClass("light");
             $("#switch").removeClass("switched");
-        } else {
+        }
+        else {
             $("body").addClass("light");
             $("#switch").addClass("switched");
         }
