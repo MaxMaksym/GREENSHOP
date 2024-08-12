@@ -35,6 +35,11 @@
     main .welcome .container .welcome-image {
         display: none;
     }
+
+    header .main-nav .third-ul {
+        top: -25px;
+        left: -56px;
+    }
 }
 
 @media only screen and (max-width: 660px) {
