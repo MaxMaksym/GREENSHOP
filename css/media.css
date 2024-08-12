@@ -152,10 +152,9 @@
         margin-right: 20px;
     }
 
-        main .goods-section .goods-list .goods-header {
+    main .goods-section .goods-list .goods-header {
         margin-bottom: 0;
     }
-
 
 
     main .goods-section .pagination ul {
@@ -189,5 +188,28 @@
     }
 }
 
+@media only screen and (max-width: 580px) {
+    main .special-offers-section .article {
+        flex-direction: column;
+        padding-right: 0;
+    }
 
+    main .special-offers-section .article .info h3 {
+        text-align: center;
+    }
+
+    main .special-offers-section .article .info p {
+        text-align: center;
+    }
+
+
+    main .special-offers-section .article .info {
+        max-width: 287px;
+        padding: 15px;
+    }
+
+    main .special-offers-section .article .info .find-more-btn {
+        margin-right: calc(50% - 70px);
+    }
+}
 
